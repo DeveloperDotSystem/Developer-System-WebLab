@@ -1,0 +1,400 @@
+:root {
+  --black01: rgba(0, 0, 0, 0.1);
+  --black02: rgba(0, 0, 0, 0.2);
+  --black03: rgba(0, 0, 0, 0.3);
+  --black04: rgba(0, 0, 0, 0.4);
+  --black05: rgba(0, 0, 0, 0.5);
+  --black06: rgba(0, 0, 0, 0.6);
+  --black07: rgba(0, 0, 0, 0.7);
+  --black08: rgba(0, 0, 0, 0.8);
+  --black09: rgba(0, 0, 0, 0.9);
+  --black10: rgba(0, 0, 0, 1.0);
+  --white01: rgba(257, 257, 257, 0.1);
+  --white02: rgba(257, 257, 257, 0.2);
+  --white03: rgba(257, 257, 257, 0.3);
+  --white04: rgba(257, 257, 257, 0.4);
+  --white05: rgba(257, 257, 257, 0.5);
+  --white06: rgba(257, 257, 257, 0.6);
+  --white07: rgba(257, 257, 257, 0.7);
+  --white08: rgba(257, 257, 257, 0.8);
+  --white09: rgba(257, 257, 257, 0.9);
+  --white10: rgba(257, 257, 257, 1.0);
+  --shadow1: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+body {
+  user-select: none;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  background-color: var(--white10);
+  color: var(--black07);
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  scroll-behavior: smooth;
+}
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  .actionClass {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white10);
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .navMenu {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navMenuItemContainer {
+    position: fixed;
+    left: -260px;
+    top: 0px;
+    height: 100%;
+    width: 260px;
+    cursor: default;
+    transition: all 0.4s ease-in-out;
+    background-color: var(--white10);
+    box-shadow: var(--shadow1);
+    overflow-y: scroll;
+  }
+  .menuHeader {
+    width: 100%;
+    height: 7%;
+    display: inline-flex;
+  }
+  .menuListContainer {
+    width: 100%;
+    height: 93%;
+    display: flex;
+    justify-content: center;
+  }
+  .menuListContent {
+    width: 95%;
+    height: 100%;
+  }
+  .menuList {
+    margin-bottom: 3px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .menuList span {
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .menuList:hover {
+    background-color: var(--black10);
+    color: var(--white10);
+  }
+  .menuList span i {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+  .menuCloseButton {
+    width: 17%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menuBrand {
+    width: 83%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+  .navBrand {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 18px;
+    color: inherit;
+  }
+  .navToogle {
+    width: 15%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .navToogleContent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .navMoreButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .navMoreButton:hover,
+  .material-icons-outlined.menu:hover,
+  .material-icons-outlined.menuClose:hover {
+    background-color: rgba(37, 190, 104, 0.2);
+  }
+  .moreContentContainer {
+    width: 100%;
+    height: 260px;
+    position: fixed;
+    top: -260px;
+    right: 0px;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    background-color: var(--white10);
+    z-index: 5;
+    overflow: hidden;
+    box-shadow: var(--shadow1);
+  }
+  .moreHeaderSide {
+    width: 100%;
+    height: 20%;
+    display: inline-flex;
+    align-items: center;
+  }
+  .moreContentSide {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+  }
+  .moreItemContainer {
+    width: 90%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .moreItemContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .moreList {
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .moreList:hover {
+    color: var(--white10);
+    background-color: var(--black10);
+  }
+  .moreFooter {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .moreCloseButton {
+    width: 90%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: var(--black10);
+    color: var(--white10);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .leftHeader {
+    width: 80%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+  }
+  .rightHeader {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .feedbackIconHeader,
+  .helpIconHeader {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .textHeaderName {
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--black06);
+    margin-left: 3px;
+  }
+  .bodyClass {
+    margin-top: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  .welcomeContainer {
+    background-color: #114C98;
+    color: var(--white10);
+  }
+  .welcomeHeader {
+    font-size: 37px;
+    font-weight: 600;
+    padding: 15px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .welcomeText {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .welcomeText a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .welcomeText a:hover {
+    text-decoration: underline;
+  }
+  .welcomeInputContainer {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .welcomeInputSearch {
+    width: 90%;
+    height: 45%;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--white10);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .welcomeInputIcon {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .welcomeInputIcon i {
+    font-size: 23px;
+    color: var(--black07);
+  }
+  .welcomeInput {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .welcomeInput input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
+  .material-icons-outlined.menu {
+    border-radius: 50%;
+    font-size: 27px;
+    transition-duration: 0.3s;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .material-icons-outlined.more {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .material-icons-sharp.codenav {
+    font-size: 35px;
+    margin-right: 3px;
+  }
+  .material-icons-sharp.codeBrand {
+    font-size: 30px;
+    margin-right: 3px;
+  }
+  .material-icons-sharp.codenav,
+  .material-icons-sharp.codeBrand {
+    color: rgba(37, 190, 104, 0.9);
+  }
+  .material-icons-outlined.moreListIcon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  .material-icons-outlined.overflowScroller {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: var(--white10);
+    box-shadow: var(--shadow1);
+    color: var(--black06);
+    font-size: 25px;
+    z-index: 5;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  .material-icons-outlined.leftHeaderIcon {
+    font-size: 30px;
+    margin-left: 15px;
+    color: rgba(37, 190, 104, 0.9);
+    display: inline-flex;
+    align-items: center;
+  }
+  .material-icons-outlined.help,
+  .material-icons-outlined.feedbackIcon {
+    font-size: 23px;
+    color: var(--black06);
+    padding: 5px;
+    border-radius: 50%;
+  }
+  .material-icons-outlined.help {
+    cursor: help;
+  }
+  .material-icons-outlined.menuClose {
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 50%;
+    padding: 5px;
+  }
+}
